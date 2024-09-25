@@ -26,7 +26,7 @@ jobs:
 
           # Move the extracted contents
           mv upld/extracted/$filename temp
-          mv temp/out/* . || echo "No 'out' directory, adjusting based on contents"
+          mv temp/* . || echo "No 'out' directory, adjusting based on contents"
           
           # Clean up
           rm -r temp upld/*.zip
