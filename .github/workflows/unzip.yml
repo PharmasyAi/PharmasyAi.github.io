@@ -42,4 +42,5 @@ jobs:
           else
             git commit -m "Unzip files"
             git push origin main
+          fi
             
