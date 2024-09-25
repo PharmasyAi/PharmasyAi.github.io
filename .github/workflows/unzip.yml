@@ -1,9 +1,10 @@
-name: extract a zip file
+name: Extract a zip file
 on:
   push:
     paths:
-    - 'upld/**.zip'
+      - 'upld/**.zip'
   workflow_dispatch:
+
 jobs:
   unzip:
     runs-on: ubuntu-latest
@@ -11,17 +12,33 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
-      - name: unzip
+      - name: Unzip files
         run: |
+          # Remove previous extracted folder if it exists
           rm -r upld/extracted || true
-          filename=$(basename -s .zip *.zip)
-          unzip *.zip
-          rm *.zip
-          mv $filename temp
-          mv temp/out/* .
-          rm -r temp
+
+          # Get the zip file
+          zipfile=$(ls upld/*.zip | head -n 1)
+          filename=$(basename -s .zip "$zipfile")
+
+          # Unzip the file
+          unzip "$zipfile" -d upld/extracted
+
+          # Move the extracted contents
+          mv upld/extracted/$filename temp
+          mv temp/out/* . || echo "No 'out' directory, adjusting based on contents"
+          
+          # Clean up
+          rm -r temp upld/*.zip
+
+      - name: Commit and push changes
+        run: |
           git config --local user.email "github-actions@users.noreply.github.com"
           git config --local user.name "github-actions"
+          
           git add .
-          git commit -m "unzip"
-          git push origin main              
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Unzip files"
+            git push origin main
