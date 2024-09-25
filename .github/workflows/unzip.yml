@@ -25,7 +25,7 @@ jobs:
           unzip "$zipfile" -d upld/extracted
 
           # Move the extracted contents
-          mv upld/extracted/$filename temp
+          mv upld/extracted temp
           mv temp/* . || echo "No 'out' directory, adjusting based on contents"
           
           # Clean up
