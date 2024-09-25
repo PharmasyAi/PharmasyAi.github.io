@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa-IR">
+<head>
+	<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="pingback" href="/xmlrpc.php">
+
+	<script type="text/javascript">document.documentElement.className = 'js';</script>
+	
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<style id="et-divi-open-sans-inline-css">/* Original: https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,latin-ext&display=swap *//* User Agent: Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) Safari/538.1 Daum/4.1 */@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk5hkWV4exQ.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkWV4exQ.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkxhjWV4exQ.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkyFjWV4exQ.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk0ZjWV4exQ.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4uaVc.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4uaVc.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1x4uaVc.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4uaVc.ttf) format('truetype');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgshZ1x4uaVc.ttf) format('truetype');}/* User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0 */@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk5hkWV4exg.woff) format('woff');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkWV4exg.woff) format('woff');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkxhjWV4exg.woff) format('woff');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkyFjWV4exg.woff) format('woff');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk0ZjWV4exg.woff) format('woff');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4uaVQ.woff) format('woff');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4uaVQ.woff) format('woff');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1x4uaVQ.woff) format('woff');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4uaVQ.woff) format('woff');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgshZ1x4uaVQ.woff) format('woff');}/* User Agent: Mozilla/5.0 (Windows NT 6.3; rv:39.0) Gecko/20100101 Firefox/39.0 */@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk5hkWV4ewA.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk8ZkWV4ewA.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkxhjWV4ewA.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0RkyFjWV4ewA.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: italic;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memQYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWq8tWZ0Pw86hd0Rk0ZjWV4ewA.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 300;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsiH0B4uaVI.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 400;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsjZ0B4uaVI.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 600;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsgH1x4uaVI.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 700;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgsg-1x4uaVI.woff2) format('woff2');}@font-face {font-family: 'Open Sans';font-style: normal;font-weight: 800;font-stretch: normal;font-display: swap;src: url(https://fonts.gstatic.com/s/opensans/v40/memSYaGs126MiZpBA-UvWbX2vVnXBbObj2OVZyOOSr4dVJWUgshZ1x4uaVI.woff2) format('woff2');}</style>
+<meta name="robots" content="noindex, nofollow">
+<script type="text/javascript">let jqueryParams=[],jQuery=function(r){return jqueryParams=[...jqueryParams,r],jQuery},$=function(r){return jqueryParams=[...jqueryParams,r],$};window.jQuery=jQuery,window.$=jQuery;let customHeadScripts=!1;jQuery.fn=jQuery.prototype={},$.fn=jQuery.prototype={},jQuery.noConflict=function(r){if(window.jQuery)return jQuery=window.jQuery,$=window.jQuery,customHeadScripts=!0,jQuery.noConflict},jQuery.ready=function(r){jqueryParams=[...jqueryParams,r]},$.ready=function(r){jqueryParams=[...jqueryParams,r]},jQuery.load=function(r){jqueryParams=[...jqueryParams,r]},$.load=function(r){jqueryParams=[...jqueryParams,r]},jQuery.fn.ready=function(r){jqueryParams=[...jqueryParams,r]},$.fn.ready=function(r){jqueryParams=[...jqueryParams,r]};</script>
+	<!-- This site is optimized with the Yoast SEO Premium plugin v20.9 (Yoast SEO v20.9) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>دسته‌بندی نشده Archives - داروخانه دیجیتال</title>
+	<meta property="og:locale" content="fa_IR">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="دسته‌بندی نشده Archives">
+	<meta property="og:url" content="/category/دستهبندی-نشده/">
+	<meta property="og:site_name" content="داروخانه دیجیتال">
+	<meta name="twitter:card" content="summary_large_image">
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","@id":"/category/%d8%af%d8%b3%d8%aa%d9%87%d8%a8%d9%86%d8%af%db%8c-%d9%86%d8%b4%d8%af%d9%87/","url":"/category/%d8%af%d8%b3%d8%aa%d9%87%d8%a8%d9%86%d8%af%db%8c-%d9%86%d8%b4%d8%af%d9%87/","name":"دسته‌بندی نشده Archives - داروخانه دیجیتال","isPartOf":{"@id":"/#website"},"breadcrumb":{"@id":"/category/%d8%af%d8%b3%d8%aa%d9%87%d8%a8%d9%86%d8%af%db%8c-%d9%86%d8%b4%d8%af%d9%87/#breadcrumb"},"inLanguage":"fa-IR"},{"@type":"BreadcrumbList","@id":"/category/%d8%af%d8%b3%d8%aa%d9%87%d8%a8%d9%86%d8%af%db%8c-%d9%86%d8%b4%d8%af%d9%87/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"/"},{"@type":"ListItem","position":2,"name":"دسته‌بندی نشده"}]},{"@type":"WebSite","@id":"/#website","url":"/","name":"داروخانه دیجیتال","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"fa-IR"}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel="alternate" type="application/rss+xml" title="داروخانه دیجیتال &raquo; خوراک" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="داروخانه دیجیتال &raquo; خوراک دیدگاه‌ها" href="/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="داروخانه دیجیتال &raquo; دسته‌بندی نشده خوراک دسته" href="/category/%d8%af%d8%b3%d8%aa%d9%87%d8%a8%d9%86%d8%af%db%8c-%d9%86%d8%b4%d8%af%d9%87/feed/">
+<meta content="فارسی‌ساز هوشمند دیوی v.1.5" name="generator">
+<link rel="stylesheet" id="wp-block-library-rtl-css" href="/wp-includes/css/dist/block-library/style-rtl.min.css?ver=6.6.1" type="text/css" media="all">
+<style id="wp-block-library-theme-inline-css" type="text/css">.wp-block-audio :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-audio :where(figcaption){color:#ffffffa6}.wp-block-audio{margin:0 0 1em}.wp-block-code{border:1px solid #ccc;border-radius:4px;font-family:Menlo,Consolas,monaco,monospace;padding:.8em 1em}.wp-block-embed :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-embed :where(figcaption){color:#ffffffa6}.wp-block-embed{margin:0 0 1em}.blocks-gallery-caption{color:#555;font-size:13px;text-align:center}.is-dark-theme .blocks-gallery-caption{color:#ffffffa6}:root :where(.wp-block-image figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme :root :where(.wp-block-image figcaption){color:#ffffffa6}.wp-block-image{margin:0 0 1em}.wp-block-pullquote{border-bottom:4px solid;border-top:4px solid;color:currentColor;margin-bottom:1.75em}.wp-block-pullquote cite,.wp-block-pullquote footer,.wp-block-pullquote__citation{color:currentColor;font-size:.8125em;font-style:normal;text-transform:uppercase}.wp-block-quote{border-left:.25em solid;margin:0 0 1.75em;padding-left:1em}.wp-block-quote cite,.wp-block-quote footer{color:currentColor;font-size:.8125em;font-style:normal;position:relative}.wp-block-quote.has-text-align-right{border-left:none;border-right:.25em solid;padding-left:0;padding-right:1em}.wp-block-quote.has-text-align-center{border:none;padding-left:0}.wp-block-quote.is-large,.wp-block-quote.is-style-large,.wp-block-quote.is-style-plain{border:none}.wp-block-search .wp-block-search__label{font-weight:700}.wp-block-search__button{border:1px solid #ccc;padding:.375em .625em}:where(.wp-block-group.has-background){padding:1.25em 2.375em}.wp-block-separator.has-css-opacity{opacity:.4}.wp-block-separator{border:none;border-bottom:2px solid;margin-left:auto;margin-right:auto}.wp-block-separator.has-alpha-channel-opacity{opacity:1}.wp-block-separator:not(.is-style-wide):not(.is-style-dots){width:100px}.wp-block-separator.has-background:not(.is-style-dots){border-bottom:none;height:1px}.wp-block-separator.has-background:not(.is-style-wide):not(.is-style-dots){height:2px}.wp-block-table{margin:0 0 1em}.wp-block-table td,.wp-block-table th{word-break:normal}.wp-block-table :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-table :where(figcaption){color:#ffffffa6}.wp-block-video :where(figcaption){color:#555;font-size:13px;text-align:center}.is-dark-theme .wp-block-video :where(figcaption){color:#ffffffa6}.wp-block-video{margin:0 0 1em}:root :where(.wp-block-template-part.has-background){margin-bottom:0;margin-top:0;padding:1.25em 2.375em}</style>
+<style id="global-styles-inline-css" type="text/css">:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1);--wp--preset--shadow--crisp: 6px 6px 0px rgba(0, 0, 0, 1);}:root { --wp--style--global--content-size: 823px;--wp--style--global--wide-size: 1080px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:root :where(body){padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;line-height: inherit;padding: calc(0.667em + 2px) calc(1.333em + 2px);text-decoration: none;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}</style>
+<link rel="stylesheet" id="idivi-style-css" href="/wp-content/themes/Divi-WPMonster/style.css?ver=6.6.1" type="text/css" media="all">
+<link rel="stylesheet" id="idivi-rtl-css" href="/wp-content/themes/Divi-WPMonster/style-static.min.css?ver=6.6.1" type="text/css" media="all">
+<link rel="stylesheet" id="idivi-cpt-style-css" href="/wp-content/themes/Divi-WPMonster/style-cpt.css?ver=6.6.1" type="text/css" media="all">
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" title="JSON" type="application/json" href="/wp-json/wp/v2/categories/1">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<meta name="generator" content="WordPress 6.6.1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link rel="stylesheet" id="et-divi-customizer-global-cached-inline-styles" href="/wp-content/et-cache/global/et-divi-customizer-global.min.css?ver=1727295306">
+<link rel="stylesheet" id="et-core-unified-cpt-610-cached-inline-styles" href="/wp-content/et-cache/610/et-core-unified-cpt-610.min.css?ver=1727295307">
+<link rel="stylesheet" id="et-core-unified-cpt-deferred-610-cached-inline-styles" href="/wp-content/et-cache/610/et-core-unified-cpt-deferred-610.min.css?ver=1727295307">
+</head>
+<body class="rtl archive category category-1 et-tb-has-template et-tb-has-header et-tb-header-disabled et-tb-has-body et-tb-has-footer et-tb-footer-disabled et_pb_button_helper_class et_cover_background et_pb_gutter et_pb_gutters3 et_divi_theme et-db">
+	<div id="page-container">
+<div id="et-boc" class="et-boc">
+			
+		<div id="et-main-area">
+	
+    <div id="main-content">
+    <div class="et-l et-l--body">
+			<div class="et_builder_inner_content et_pb_gutters3">
+		<div class="et_pb_section et_pb_section_0_tb_body et_animated et_pb_with_background et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0_tb_body">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_0_tb_body  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_0_tb_body  et_pb_text_align_right et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h1 style="text-align: right;"><span>با سلامتی هوشمند، به سلامتی پایدار دست یابید.</span></h1></div>
+			</div>
+<div class="et_pb_module et_pb_text et_pb_text_1_tb_body  et_pb_text_align_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: justify;"><span>سایت جامع سلامتی هوشمند، یک پلتفرم آنلاین تعاملی است که با هدف ارائه اطلاعات دقیق و کاربردی در زمینه طب سنتی و مکمل، به کاربران کمک می‌کند تا به سلامت جسمی و روحی خود دست یابند. این پلتفرم با استفاده از هوش مصنوعی و الگوریتم‌های پیشرفته، امکان شخصی‌سازی تجربه‌ی کاربری را فراهم کرده و به کاربران کمک می‌کند تا بهترین انتخاب‌ها را برای حفظ سلامتی خود انجام دهند.</span></p></div>
+			</div>
+<div class="et_pb_button_module_wrapper et_pb_button_0_tb_body_wrapper  et_pb_module ">
+				<a class="et_pb_button et_pb_button_0_tb_body et_animated et_pb_bg_layout_light" href="#buyCard" data-icon="&#x44;">رایگان شروع کنید</a>
+			</div>
+			</div>
+<div class="et_pb_column et_pb_column_1_2 et_pb_column_1_tb_body  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_0_tb_body et_animated et-waypoint">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" src="/wp-content/uploads/2024/09/Captثفقغure_prev_ui.png" alt="داروخانه دیجیتال" title="Captثفقغure_prev_ui"></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>
+<div class="et_pb_section et_pb_section_1_tb_body et_section_specialty">
+				
+				
+				
+				
+				
+				<div class="et_pb_row">
+				<div class="et_pb_column et_pb_column_1_3 et_pb_column_2_tb_body    et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_2_tb_body et_animated  et_pb_text_align_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2 style="text-align: right;"><span>سلامتی هوشمند</span></h2></div>
+			</div>
+<div class="et_pb_module et_pb_divider et_pb_divider_0_tb_body et_animated et_pb_divider_position_ et_pb_space"><div class="et_pb_divider_internal"></div></div>
+<div class="et_pb_module et_pb_text et_pb_text_3_tb_body et_animated  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">
+<h4><span>سایت جامع طب سنتی، با گردآوری اطلاعات جامع و معتبر در زمینه طب سنتی، به کاربران امکان می‌دهد تا:</span></h4>
+<p style="text-align: justify;"><span style="font-family: inherit; font-weight: normal;">شما می توانید با سیستم هوشمند <span>سلامتی هوشمند</span> به عملکرد بدن و زندگی خود بهبود ببخشید و با استفاده از این ویژگی ها    شما می توانید به مدیریت خود بپردازید از <span>درمان بیماری‌ها تا بهبود سبک زندگی و&#8230;</span></span></p>
+</div>
+			</div>
+<div class="et_pb_button_module_wrapper et_pb_button_1_tb_body_wrapper et_pb_button_alignment_left et_pb_module ">
+				<a class="et_pb_button et_pb_button_1_tb_body et_animated et_pb_bg_layout_light" href="#buyCard" data-icon="&#x44;">به جمع کاربران ما بپیوندید</a>
+			</div>
+			</div>
+<div class="et_pb_column et_pb_column_2_3 et_pb_column_3_tb_body   et_pb_specialty_column  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_row_inner et_pb_row_inner_0_tb_body et_animated et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_1_3 et_pb_column_inner et_pb_column_inner_0_tb_body et_pb_column_1_2">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_blurb et_pb_blurb_0_tb_body et_animated  et_pb_text_align_left  et_pb_blurb_position_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="#"><span class="et_pb_image_wrap et_pb_only_image_mode_wrap"><img fetchpriority="high" decoding="async" width="348" height="362" src="/wp-content/uploads/2024/08/Capturefsrtfhge.png" alt="" srcset="/wp-content/uploads/2024/08/Capturefsrtfhge.png 348w, /wp-content/uploads/2024/08/Capturefsrtfhge-288x300.png 288w" sizes="(max-width: 348px) 100vw, 348px" class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone wp-image-634"></span></a></div>
+					<div class="et_pb_blurb_container">
+						<h4 class="et_pb_module_header"><a href="#">بخش تاریخچه بیماری ها</a></h4>
+						<div class="et_pb_blurb_description"><p style="text-align: right;">با ثبت تاریخچه بیماری‌ها، آزمایش‌ها و نسخه‌های پزشکی، به یک بانک اطلاعاتی شخصی از وضعیت سلامتی خود دسترسی داشته باشید.</p></div>
+					</div>
+				</div>
+			</div>
+<div class="et_pb_module et_pb_blurb et_pb_blurb_1_tb_body et_animated  et_pb_text_align_left  et_pb_blurb_position_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="#"><span class="et_pb_image_wrap et_pb_only_image_mode_wrap"><img decoding="async" width="353" height="354" src="/wp-content/uploads/2024/08/Capture78.png" alt="" srcset="/wp-content/uploads/2024/08/Capture78.png 353w, /wp-content/uploads/2024/08/Capture78-300x300.png 300w, /wp-content/uploads/2024/08/Capture78-150x150.png 150w" sizes="(max-width: 353px) 100vw, 353px" class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone wp-image-633"></span></a></div>
+					<div class="et_pb_blurb_container">
+						<h4 class="et_pb_module_header"><a href="#">بخش داروخانه </a></h4>
+						<div class="et_pb_blurb_description"><p style="text-align: right;"><span style="font-family: inherit; font-weight: normal;"><span>با دریافت پیشنهاد داروهای گیاهی مناسب برای هر بیماری، اطلاعات کاملی در مورد خواص و نحوه مصرف هر دارو به دست آورند.</span></span></p></div>
+					</div>
+				</div>
+			</div>
+<div class="et_pb_module et_pb_blurb et_pb_blurb_2_tb_body et_animated  et_pb_text_align_left  et_pb_blurb_position_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="#"><span class="et_pb_image_wrap et_pb_only_image_mode_wrap"><img decoding="async" width="340" height="348" src="/wp-content/uploads/2024/08/Capturesd.png" alt="" srcset="/wp-content/uploads/2024/08/Capturesd.png 340w, /wp-content/uploads/2024/08/Capturesd-293x300.png 293w" sizes="(max-width: 340px) 100vw, 340px" class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone wp-image-635"></span></a></div>
+					<div class="et_pb_blurb_container">
+						<h4 class="et_pb_module_header"><a href="#">بخش اطلاعات</a></h4>
+						<div class="et_pb_blurb_description"><p style="text-align: right;"><span>به منابع معتبر و جامع در زمینه طب سنتی، از جمله کتاب‌ها، مقالات و ویدیوهای آموزشی دسترسی داشته باشند.</span></p></div>
+					</div>
+				</div>
+			</div>
+<div class="et_pb_module et_pb_blurb et_pb_blurb_3_tb_body et_animated  et_pb_text_align_left  et_pb_blurb_position_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="#"><span class="et_pb_image_wrap et_pb_only_image_mode_wrap"><img decoding="async" width="344" height="344" src="/wp-content/uploads/2024/08/Captursdfe.png" alt="" srcset="/wp-content/uploads/2024/08/Captursdfe.png 344w, /wp-content/uploads/2024/08/Captursdfe-300x300.png 300w, /wp-content/uploads/2024/08/Captursdfe-150x150.png 150w" sizes="(max-width: 344px) 100vw, 344px" class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone wp-image-637"></span></a></div>
+					<div class="et_pb_blurb_container">
+						<h4 class="et_pb_module_header"><a href="#">بخش تعیین طبع و مزاج</a></h4>
+						<div class="et_pb_blurb_description"><p style="text-align: right;"><span>با انجام تست‌های ساده، طبع و مزاج خود را شناسایی کرده و با توجه به آن، رژیم غذایی و سبک زندگی خود را تنظیم کنند.</span></p></div>
+					</div>
+				</div>
+			</div>
+			</div>
+<div class="et_pb_column et_pb_column_1_3 et_pb_column_inner et_pb_column_inner_1_tb_body et_pb_column_1_2 et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_blurb et_pb_blurb_4_tb_body et_animated  et_pb_text_align_left  et_pb_blurb_position_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="#"><span class="et_pb_image_wrap et_pb_only_image_mode_wrap"><img decoding="async" width="356" height="375" src="/wp-content/uploads/2024/08/Capture.png" alt="" srcset="/wp-content/uploads/2024/08/Capture.png 356w, /wp-content/uploads/2024/08/Capture-285x300.png 285w" sizes="(max-width: 356px) 100vw, 356px" class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone wp-image-631"></span></a></div>
+					<div class="et_pb_blurb_container">
+						<h4 class="et_pb_module_header"><a href="#">بخش خود درمانگر</a></h4>
+						<div class="et_pb_blurb_description"><p style="text-align: right;"><span>با استفاده از هوش مصنوعی، بیماری‌های احتمالی خود را بر اساس علائم شناسایی کرده و درصد احتمال هر بیماری را  مشاهده کنند، تا برای بهبودی خود اقدام کنید.</span></p></div>
+					</div>
+				</div>
+			</div>
+<div class="et_pb_module et_pb_blurb et_pb_blurb_5_tb_body et_animated  et_pb_text_align_left  et_pb_blurb_position_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="#"><span class="et_pb_image_wrap et_pb_only_image_mode_wrap"><img decoding="async" width="345" height="349" src="/wp-content/uploads/2024/08/Captusdfre.png" alt="" srcset="/wp-content/uploads/2024/08/Captusdfre.png 345w, /wp-content/uploads/2024/08/Captusdfre-297x300.png 297w" sizes="(max-width: 345px) 100vw, 345px" class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone wp-image-638"></span></a></div>
+					<div class="et_pb_blurb_container">
+						<h4 class="et_pb_module_header"><a href="#">اشتراک گذاری تجربیات</a></h4>
+						<div class="et_pb_blurb_description"><p style="text-align: right;"><span>تجربیات خود را در زمینه مصرف مواد غذایی، داروها و درمان‌های مختلف با سایر کاربران به اشتراک گذاشته و از تجربیات دیگران نیز بهره‌مند شوند.</span></p></div>
+					</div>
+				</div>
+			</div>
+<div class="et_pb_module et_pb_blurb et_pb_blurb_6_tb_body et_animated  et_pb_text_align_left  et_pb_blurb_position_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="#"><span class="et_pb_image_wrap"><span class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-pb-icon"></span></span></a></div>
+					<div class="et_pb_blurb_container">
+						<h4 class="et_pb_module_header"><a href="#">بخش چی بپزیم</a></h4>
+						<div class="et_pb_blurb_description"><p style="text-align: right;"><span style="font-family: inherit; font-weight: normal;"><span>با مراجعه به بخش &#8220;چی بپزیم&#8221; و &#8220;میان وعده چی بخوریم&#8221;، به دستور پخت‌های متنوع و سالم با توجه به طبع و مزاج دسترسی پیدا کنند.</span></span></p></div>
+					</div>
+				</div>
+			</div>
+<div class="et_pb_module et_pb_blurb et_pb_blurb_7_tb_body et_animated  et_pb_text_align_left  et_pb_blurb_position_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="#"><span class="et_pb_image_wrap"><span class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-pb-icon"></span></span></a></div>
+					<div class="et_pb_blurb_container">
+						<h4 class="et_pb_module_header"><a href="#">ارتقای دانش</a></h4>
+						<div class="et_pb_blurb_description"><div class="et_pb_blurb_description">
+<p style="text-align: right;"><span>با ارائه منابع معتبر و امکان یادگیری مداوم، به کاربران کمک می‌کند تا دانش خود را در زمینه طب سنتی افزایش دهند.</span></p>
+</div></div>
+					</div>
+				</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+			</div>
+				</div>
+				
+			</div>
+<div class="et_pb_section et_pb_section_2_tb_body et_pb_with_background et_section_regular section_has_divider et_pb_bottom_divider et_pb_top_divider">
+				<div class="et_pb_top_inside_divider et-no-transition"></div>
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_1_tb_body et_animated">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_4_tb_body  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_1_tb_body">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" src="/wp-content/uploads/2024/09/Capقبلبture_prev_ui.png" alt="" title="Capقبلبture_prev_ui"></span>
+			</div>
+			</div>
+<div class="et_pb_column et_pb_column_1_2 et_pb_column_5_tb_body  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_4_tb_body et_animated  et_pb_text_align_right et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2 style="text-align: right;"><span>دلیل استفاده از هوش مصنوعی</span></h2></div>
+			</div>
+<div class="et_pb_module et_pb_divider et_pb_divider_1_tb_body et_animated et_pb_divider_position_ et_pb_space"><div class="et_pb_divider_internal"></div></div>
+<div class="et_pb_module et_pb_text et_pb_text_5_tb_body et_animated  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">
+<p style="text-align: justify;"><span>* تشخیص دقیق بیماری‌ها: با تحلیل علائم و اطلاعات پزشکی، هوش مصنوعی می‌تواند بیماری‌های احتمالی را با دقت بالایی تشخیص دهد.</span><br><span> * پیشنهاد درمان‌های شخصی‌سازی شده: با توجه به ویژگی‌های فردی هر بیمار، هوش مصنوعی می‌تواند درمان‌های مناسب و موثر را پیشنهاد کند.</span><br><span> * بهبود تجربه کاربری: با استفاده از الگوریتم‌های یادگیری ماشین، هوش مصنوعی می‌تواند تجربه کاربری را بهبود بخشیده و به کاربران کمک کند تا سریع‌تر به اطلاعات مورد نظر خود دسترسی پیدا کنند.</span></p>
+<p style="text-align: justify;"><span>* نتیجه توسط پزشکان بررسی خواهد شد تا صحت تشخیص مطمئن باشد </span></p>
+</div>
+			</div>
+<div class="et_pb_button_module_wrapper et_pb_button_2_tb_body_wrapper  et_pb_module ">
+				<a class="et_pb_button et_pb_button_2_tb_body et_animated et_pb_bg_layout_light" href="#buyCard" data-icon="&#x44;">اکنون دسترسی پیدا کنید</a>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				<div class="et_pb_bottom_inside_divider et-no-transition"></div>
+			</div>
+<div class="et_pb_section et_pb_section_3_tb_body et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_2_tb_body">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_6_tb_body  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_2_tb_body et_animated et-waypoint">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" width="128" height="128" src="/wp-content/uploads/2024/08/coding-iconArtboard-19-copy-8.jpg" alt="" title="" class="wp-image-33"></span>
+			</div>
+<div class="et_pb_module et_pb_text et_pb_text_6_tb_body et_animated  et_pb_text_align_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2 style="text-align: right;"><span>کارکرد اصلی سایت (سه رویکرد):</span></h2></div>
+			</div>
+<div class="et_pb_module et_pb_divider et_pb_divider_2_tb_body et_animated et_pb_divider_position_ et_pb_space"><div class="et_pb_divider_internal"></div></div>
+<div class="et_pb_module et_pb_text et_pb_text_7_tb_body et_animated  et_pb_text_align_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">
+<h4 style="text-align: right;">* <strong>مربی شخصی طب سنتی</strong>: <span>سلامتی هوشمند</span> به عنوان یک مربی شخصی، به کاربران کمک می‌کند تا با توجه به مزاج و شرایط فردی خود، به یک رژیم غذایی و سبک زندگی سالم دست پیدا کنند.<br>* <strong>دایره المعارف طب سنتی</strong>: این پلتفرم، منبعی جامع از اطلاعات معتبر در زمینه طب سنتی است که به کاربران امکان می‌دهد تا به صورت خودآموز، دانش خود را در این حوزه افزایش دهند.<br>* <strong>شبکه اجتماعی سلامت</strong>: سایت <span>سلامتی هوشمند</span> فضایی را فراهم می‌کند تا کاربران بتوانند تجربیات خود را به اشتراک بگذارند، از دیگران بیاموزند و در یک جامعه بزرگ و فعال، به تبادل اطلاعات بپردازند.</h4>
+<h4 style="text-align: right;">* نگهداری پروفایل و تاریخچه وضعیت سلامت شما</h4>
+</div>
+			</div>
+			</div>
+<div class="et_pb_column et_pb_column_1_2 et_pb_column_7_tb_body  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_3_tb_body et_animated et-waypoint">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" src="/wp-content/uploads/2024/09/Captقثفقغure_prev_ui.png" alt="Capture32_prev_ui" title="Captقثفقغure_prev_ui"></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+<div class="et_pb_row et_pb_row_3_tb_body">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_8_tb_body  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_4_tb_body et_animated et-waypoint">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" src="/wp-content/uploads/2024/09/Capturسقیلبe_prev_ui.png" alt="Capture885_prev_ui" title="Capturسقیلبe_prev_ui"></span>
+			</div>
+			</div>
+<div class="et_pb_column et_pb_column_1_2 et_pb_column_9_tb_body  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_5_tb_body et_animated et-waypoint">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" width="128" height="128" src="/wp-content/uploads/2024/08/coding-iconArtboard-19-copy-9.jpg" alt="" title="" class="wp-image-32"></span>
+			</div>
+<div class="et_pb_module et_pb_text et_pb_text_8_tb_body et_animated  et_pb_text_align_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2 style="text-align: right;"><span>کاربردهای سلامتی هوشمند</span></h2></div>
+			</div>
+<div class="et_pb_module et_pb_divider et_pb_divider_3_tb_body et_animated et_pb_divider_position_ et_pb_space"><div class="et_pb_divider_internal"></div></div>
+<div class="et_pb_module et_pb_text et_pb_text_9_tb_body et_animated  et_pb_text_align_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h4 style="text-align: justify;">
+<span> * بهبود سبک زندگی: با ارائه اطلاعات دقیق در زمینه تغذیه، ورزش و خواب، به کاربران کمک می‌کند تا سبک زندگی سالم‌تری داشته باشند.</span><br><span> * پیشگیری از بیماری‌ها: با شناسایی عوامل خطر و ارائه راهکارهای پیشگیری، به کاربران کمک می‌کند تا از ابتلا به بسیاری از بیماری‌ها جلوگیری کنند.</span><br><span> * درمان بیماری‌ها: با ارائه اطلاعات جامع در مورد بیماری‌ها و درمان‌های مختلف، به کاربران کمک می‌کند تا در کنار درمان‌های پزشکی، از درمان‌های مکمل نیز بهره‌مند شوند.</span><br><span> * ارتقای دانش: با ارائه منابع معتبر و امکان یادگیری مداوم، به کاربران کمک می‌کند تا دانش خود را در زمینه طب سنتی افزایش دهند.</span>
+</h4></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>
+<div class="et_pb_section et_pb_section_4_tb_body et_pb_with_background et_section_regular section_has_divider et_pb_bottom_divider et_pb_top_divider">
+				<div class="et_pb_top_inside_divider et-no-transition"></div>
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_4_tb_body et_pb_equal_columns">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_10_tb_body  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_10_tb_body et_animated  et_pb_text_align_right et_pb_bg_layout_dark">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h3 style="text-align: right;"><span style="font-family: inherit;">آینده پلتفرم سلامتی هوشمند:</span></h3></div>
+			</div>
+<div class="et_pb_module et_pb_text et_pb_text_11_tb_body et_animated  et_pb_text_align_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p style="text-align: justify;"><span>سایت جامع سلامتی هوشمند، یک ابزار قدرتمند برای افرادی است که به دنبال ارتقای سلامت خود و آشنایی با طب سنتی هستند. این سایت با استفاده از فناوری‌های نوین و اطلاعات دقیق، به کاربران کمک می‌کند تا به یک زندگی سالم‌تر و شادتر دست یابند.</span></p></div>
+			</div>
+			</div>
+<div class="et_pb_column et_pb_column_1_2 et_pb_column_11_tb_body et_pb_section_parallax  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				<span class="et_parallax_bg_wrap"><span class="et_parallax_bg" style="background-image: url(/wp-content/uploads/2024/08/coding-dot-bg.png);"></span></span>
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_6_tb_body et_animated et-waypoint">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img decoding="async" width="607" height="806" src="/wp-content/uploads/2024/08/coding-dots.png" alt="" title="" srcset="/wp-content/uploads/2024/08/coding-dots.png 607w, /wp-content/uploads/2024/08/coding-dots-480x637.png 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) 607px, 100vw" class="wp-image-50"></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>
+<div class="et_pb_section et_pb_section_5_tb_body et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_5_tb_body">
+				<div class="et_pb_column et_pb_column_1_3 et_pb_column_12_tb_body  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_12_tb_body et_animated  et_pb_text_align_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><h2 style="text-align: right;"><span style="font-family: inherit;">مذیت های استفاده از <span>سلامتی هوشمند</span></span></h2></div>
+			</div>
+<div class="et_pb_module et_pb_divider et_pb_divider_4_tb_body et_animated et_pb_divider_position_ et_pb_space"><div class="et_pb_divider_internal"></div></div>
+<div class="et_pb_module et_pb_text et_pb_text_13_tb_body et_animated  et_pb_text_align_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">
+<h4 style="text-align: right;"><span>از طب سنتی تا آینده، با ما همراه باشید.</span></h4>
+<p style="text-align: justify;"><span style="font-family: inherit;">در این بخش به یکسری از مذیت های این پلتفرم داروخانه دجیتال میپردازیم، پس با ما همراه شوید تا شما هم از این مذیت ها برخوردار باشید.</span></p>
+</div>
+			</div>
+<div class="et_pb_button_module_wrapper et_pb_button_3_tb_body_wrapper et_pb_button_alignment_left et_pb_module ">
+				<a class="et_pb_button et_pb_button_3_tb_body et_animated et_pb_bg_layout_light" href="#buyCard" data-icon="&#x44;">دسترسی فوری و آسان</a>
+			</div>
+			</div>
+<div class="et_pb_column et_pb_column_1_3 et_pb_column_13_tb_body  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_blurb et_pb_blurb_8_tb_body et_animated  et_pb_text_align_left  et_pb_blurb_position_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><span class="et_pb_image_wrap"><span class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-pb-icon"></span></span></div>
+					<div class="et_pb_blurb_container">
+						<h4 class="et_pb_module_header"><span>دسترسی آسان به اطلاعات</span></h4>
+						<div class="et_pb_blurb_description"><p style="text-align: right;"><span style="font-family: inherit; font-weight: normal;"><span>کاربران به راحتی می‌توانند به اطلاعات جامع و قابل اعتمادی در مورد طب سنتی، گیاهان دارویی، بیماری‌ها و روش‌های درمان دسترسی پیدا کنند.</span></span></p></div>
+					</div>
+				</div>
+			</div>
+<div class="et_pb_module et_pb_blurb et_pb_blurb_9_tb_body et_animated  et_pb_text_align_left  et_pb_blurb_position_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><span class="et_pb_image_wrap"><span class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-pb-icon"></span></span></div>
+					<div class="et_pb_blurb_container">
+						<h4 class="et_pb_module_header"><span>ارتباط اجتماعی</span></h4>
+						<div class="et_pb_blurb_description"><p><span>بخش اشتراک‌گذاری تجربیات، فضایی برای تبادل اطلاعات و تجربیات بین کاربران ایجاد می‌کند و به افراد کمک می‌کند تا از تجربیات دیگران بهره‌مند شوند.</span></p></div>
+					</div>
+				</div>
+			</div>
+<div class="et_pb_module et_pb_blurb et_pb_blurb_10_tb_body et_animated  et_pb_text_align_left  et_pb_blurb_position_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><span class="et_pb_image_wrap"><span class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-pb-icon"></span></span></div>
+					<div class="et_pb_blurb_container">
+						<h4 class="et_pb_module_header"><span>تلفیق طب سنتی و طب جدید</span></h4>
+						<div class="et_pb_blurb_description"><p><span>با ارائه اطلاعات جامع و قابل فهم در مورد طب سنتی، این سایت می‌تواند به ترویج این دانش ارزشمند و افزایش آگاهی عمومی کمک کند.</span></p></div>
+					</div>
+				</div>
+			</div>
+			</div>
+<div class="et_pb_column et_pb_column_1_3 et_pb_column_14_tb_body  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_blurb et_pb_blurb_11_tb_body et_animated  et_pb_text_align_left  et_pb_blurb_position_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><span class="et_pb_image_wrap"><span class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-pb-icon"></span></span></div>
+					<div class="et_pb_blurb_container">
+						<h4 class="et_pb_module_header"><span>ثبت تاریخچه</span></h4>
+						<div class="et_pb_blurb_description"><p><span>با ثبت تاریخچه بیماری‌ها و تجربیات، کاربران می‌توانند به خوبی به تغییرات سلامتی خود پی ببرند و مسئولیت بیشتری در قبال سلامت خود احساس کنند.</span></p></div>
+					</div>
+				</div>
+			</div>
+<div class="et_pb_module et_pb_blurb et_pb_blurb_12_tb_body et_animated  et_pb_text_align_left  et_pb_blurb_position_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><span class="et_pb_image_wrap"><span class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-pb-icon"></span></span></div>
+					<div class="et_pb_blurb_container">
+						<h4 class="et_pb_module_header"><span>هوش مصنوعی در خدمت سلامت</span></h4>
+						<div class="et_pb_blurb_description"><p><span> استفاده از هوش مصنوعی برای تشخیص بیماری‌ها و پیشنهاد داروها، دقت و سرعت تشخیص را افزایش می‌دهد و به کمک می‌کند تا تصمیمات آگاهانه‌تری بگیرید.</span></p></div>
+					</div>
+				</div>
+			</div>
+<div class="et_pb_module et_pb_blurb et_pb_blurb_13_tb_body et_animated  et_pb_text_align_left  et_pb_blurb_position_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><span class="et_pb_image_wrap"><span class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-pb-icon"></span></span></div>
+					<div class="et_pb_blurb_container">
+						<h4 class="et_pb_module_header"><span>منابع آموزشی متنوع</span></h4>
+						<div class="et_pb_blurb_description"><p><span>وجود کتاب‌های الکترونیکی، مقالات و ویکی، این سایت را به یک منبع آموزشی غنی برای علاقه‌مندان به طب سنتی تبدیل می‌کند.</span></p></div>
+					</div>
+				</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>
+<div class="et_pb_section et_pb_section_6_tb_body et_animated et_pb_with_background et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_6_tb_body">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_15_tb_body  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_blurb et_pb_blurb_14_tb_body et_animated  et_pb_text_align_left  et_pb_blurb_position_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="#"><span class="et_pb_image_wrap"><span class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-pb-icon"></span></span></a></div>
+					<div class="et_pb_blurb_container">
+						<h4 class="et_pb_module_header"><a href="#">پشتیبانی ۲۴/۷ فوق العاده</a></h4>
+						<div class="et_pb_blurb_description"><p><span>همکاران ما به صورت تمام وقت پاسخگوی سوالات شما هستند و با خیال راحت میتوانید در هر زمان با ما ارتباط برقرار کنید. و همچنین پاسخگوی هرگونه سوال ، مشکل و… از طرف شما هستیم پس خیال شما بابت پشتیبانی سایت راحت باشد.</span></p></div>
+					</div>
+				</div>
+			</div>
+			</div>
+<div class="et_pb_column et_pb_column_1_2 et_pb_column_16_tb_body  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_blurb et_pb_blurb_15_tb_body et_animated  et_pb_text_align_left  et_pb_blurb_position_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><a href="#"><span class="et_pb_image_wrap"><span class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-pb-icon"></span></span></a></div>
+					<div class="et_pb_blurb_container">
+						<h4 class="et_pb_module_header"><a href="#">پلتفرم سلامتی هوشمند</a></h4>
+						<div class="et_pb_blurb_description"><p><span>تلاش تیم توسعه ما بر این است به بهترین خروجی را برای استفاده شما فراهم کرده و همیشه ما تلاش کرده ایم که از بهترین تکنولوژی ها برای ساخت پلتفرم داروخانه دیجیتال استفاده کنیم تا شما تجربه کاربری خوبی را از این برنامه دریافت کنید</span></p></div>
+					</div>
+				</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+<div id="buyCard" class="et_pb_row et_pb_row_7_tb_body et_pb_gutters2">
+				<div class="et_pb_column et_pb_column_1_2 et_pb_column_17_tb_body  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_14_tb_body et_animated  et_pb_text_align_right et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">
+<div class="et_pb_module et_pb_text et_pb_text_8 et_pb_bg_layout_light  et_pb_text_align_right et_had_animation">
+<div class="et_pb_text_inner">
+<h2 style="text-align: right;"><span>شروع به استفاده</span></h2>
+</div>
+</div>
+<div class="et_pb_module et_pb_text et_pb_text_9 et_pb_bg_layout_light  et_pb_text_align_right et_had_animation">
+<div class="et_pb_text_inner"></div>
+</div>
+</div>
+			</div>
+<div class="et_pb_module et_pb_text et_pb_text_15_tb_body et_animated  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">
+<div class="et_pb_module et_pb_text et_pb_text_6_tb_body  et_pb_text_align_left et_pb_bg_layout_light">
+<div class="et_pb_text_inner">
+<p><span>جهت بهره برداری از مذیت ها کاربرد ویژگی های این پلتفرم ثبت نام کنید</span></p>
+</div>
+</div>
+<div class="et_pb_module et_pb_blurb et_pb_blurb_11_tb_body  et_pb_text_align_center  et_pb_blurb_position_right et_pb_bg_layout_light">
+<div class="et_pb_blurb_content">
+<div class="et_pb_main_blurb_image"></div>
+</div>
+</div>
+</div>
+			</div>
+			</div>
+<div class="et_pb_column et_pb_column_1_2 et_pb_column_18_tb_body  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_code et_pb_code_0_tb_body">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><div class="login-wrap">
+  <div class="login-html">
+    <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">تلفن همراه</label>
+    <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">ایمیل</label>
+    <div class="login-form">
+      <div class="sign-in-htm">
+        <div class="fluentform ff-default fluentform_wrapper_4 ffs_default_wrap">
+<form data-form_id="4" id="fluentform_4" class="frm-fluent-form fluent_form_4 ff-el-form-top ff_form_instance_4_1 ff-form-loading ffs_default" data-form_instance="ff_form_instance_4_1" method="POST"><fieldset style="border: none!important;margin: 0!important;padding: 0!important;background-color: transparent!important;box-shadow: none!important;outline: none!important; min-inline-size: 100%;">
+                    <legend class="ff_screen_reader_title" style="display: block; margin: 0!important;padding: 0!important;height: 0!important;text-indent: -999999px;width: 0!important;overflow:hidden;">Subscription Form</legend>
+<input type="hidden" name="__fluent_form_embded_post_id" value="1"><input type="hidden" id="_fluentform_4_fluentformnonce" name="_fluentform_4_fluentformnonce" value="1be2f9fdf6"><input type="hidden" name="_wp_http_referer" value="/WordPrees90146/category/%D8%AF%D8%B3%D8%AA%D9%87%D8%A8%D9%86%D8%AF%DB%8C-%D9%86%D8%B4%D8%AF%D9%87/?simply_static_page=688"><div data-type="name-element" data-name="names" class=" ff-field_container ff-name-field-wrapper"><div class="ff-t-container"><div class="ff-t-cell "><div class="ff-el-group ff-el-form-top">
+<div class="ff-el-input--label asterisk-right"><label for="ff_4_names_first_name_" aria-label="تلفن همراه">تلفن همراه</label></div>
+<div class="ff-el-input--content"><input type="text" name="names[first_name]" id="ff_4_names_first_name_" class="ff-el-form-control" placeholder="مثال: 09123456789" aria-invalid="false" aria-required="false"></div>
+</div></div></div></div>
+<div class="ff-el-group ff-text-left ff_submit_btn_wrapper"><button type="submit" class="ff-btn ff-btn-submit ff-btn-md ff_btn_style">ثبت تلفن همراه</button></div>
+</fieldset></form>
+<div id="fluentform_4_errors" class="ff-errors-in-stack ff_form_instance_4_1 ff-form-loading_errors ff_form_instance_4_1_errors"></div>
+</div>        <script type="text/javascript">window.fluent_form_ff_form_instance_4_1 = {"id":"4","settings":{"layout":{"labelPlacement":"top","helpMessagePlacement":"with_label","errorMessagePlacement":"inline","asteriskPlacement":"asterisk-right"},"restrictions":{"denyEmptySubmission":{"enabled":false}}},"form_instance":"ff_form_instance_4_1","form_id_selector":"fluentform_4","rules":{"names[first_name]":{"required":{"value":false,"message":"این فیلد الزامی است","global_message":"این فیلد الزامی است","global":true}},"names[middle_name]":{"required":{"value":false,"message":"این فیلد الزامی است","global_message":"این فیلد الزامی است","global":true}},"names[last_name]":{"required":{"value":false,"message":"این فیلد الزامی است","global_message":"این فیلد الزامی است","global":true}}}};</script>
+        
+      </div>
+      <div class="sign-up-htm">
+        <div class="fluentform ff-default fluentform_wrapper_3 ffs_default_wrap">
+<form data-form_id="3" id="fluentform_3" class="frm-fluent-form fluent_form_3 ff-el-form-top ff_form_instance_3_2 ff-form-loading ffs_default" data-form_instance="ff_form_instance_3_2" method="POST"><fieldset style="border: none!important;margin: 0!important;padding: 0!important;background-color: transparent!important;box-shadow: none!important;outline: none!important; min-inline-size: 100%;">
+                    <legend class="ff_screen_reader_title" style="display: block; margin: 0!important;padding: 0!important;height: 0!important;text-indent: -999999px;width: 0!important;overflow:hidden;">Contact Form Demo</legend>
+<input type="hidden" name="__fluent_form_embded_post_id" value="1"><input type="hidden" id="_fluentform_3_fluentformnonce" name="_fluentform_3_fluentformnonce" value="1be2f9fdf6"><input type="hidden" name="_wp_http_referer" value="/WordPrees90146/category/%D8%AF%D8%B3%D8%AA%D9%87%D8%A8%D9%86%D8%AF%DB%8C-%D9%86%D8%B4%D8%AF%D9%87/?simply_static_page=688"><div class="ff-el-group">
+<div class="ff-el-input--label asterisk-right"><label for="ff_3_2_email" aria-label="ایمیل">ایمیل</label></div>
+<div class="ff-el-input--content"><input type="email" name="email" id="ff_3_2_email" class="ff-el-form-control" placeholder="مثال: test@gmail.com" data-name="email" aria-invalid="false" aria-required="false"></div>
+</div>
+<div class="ff-el-group ff-text-left ff_submit_btn_wrapper"><button type="submit" class="ff-btn ff-btn-submit ff-btn-md ff_btn_style">ثبت ایمیل</button></div>
+</fieldset></form>
+<div id="fluentform_3_errors" class="ff-errors-in-stack ff_form_instance_3_2 ff-form-loading_errors ff_form_instance_3_2_errors"></div>
+</div>        <script type="text/javascript">window.fluent_form_ff_form_instance_3_2 = {"id":"3","settings":{"layout":{"labelPlacement":"top","helpMessagePlacement":"with_label","errorMessagePlacement":"inline","cssClassName":"","asteriskPlacement":"asterisk-right"},"restrictions":{"denyEmptySubmission":{"enabled":false}}},"form_instance":"ff_form_instance_3_2","form_id_selector":"fluentform_3","rules":{"email":{"required":{"value":false,"message":"This field is required","global":false,"global_message":"این فیلد الزامی است"},"email":{"value":true,"message":"This field must contain a valid email","global":false,"global_message":"این فیلد باید حاوی یک ایمیل معتبر باشد"}}}};</script>
+        
+			</div>
+		</div>
+	</div>
+</div></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>
+<div class="et_pb_section et_pb_section_7_tb_body et_section_regular">
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_8_tb_body">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_19_tb_body  et_pb_css_mix_blend_mode_passthrough et-last-child et_pb_column_empty">
+				
+				
+				
+				
+				
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</div>
+	    </div>
+    
+		</div>
+
+			
+		</div>
+		</div>
+
+				<script type="text/javascript">var et_animation_data = [{"class":"et_pb_section_0_tb_body","style":"slideTop","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"2%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_button_0_tb_body","style":"zoom","repeat":"once","duration":"1000ms","delay":"100ms","intensity":"10%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_image_0_tb_body","style":"zoomLeft","repeat":"once","duration":"1000ms","delay":"100ms","intensity":"20%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_text_2_tb_body","style":"slideBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"10%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_divider_0_tb_body","style":"zoomLeft","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_text_3_tb_body","style":"zoom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"6%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_button_1_tb_body","style":"zoom","repeat":"once","duration":"1000ms","delay":"100ms","intensity":"6%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_row_inner_0_tb_body","style":"zoom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"6%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_blurb_0_tb_body","style":"zoomBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"20%","starting_opacity":"100%","speed_curve":"ease-in-out"},{"class":"et_pb_blurb_1_tb_body","style":"zoomBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"20%","starting_opacity":"100%","speed_curve":"ease-in-out"},{"class":"et_pb_blurb_2_tb_body","style":"zoomBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"20%","starting_opacity":"100%","speed_curve":"ease-in-out"},{"class":"et_pb_blurb_3_tb_body","style":"zoomBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"20%","starting_opacity":"100%","speed_curve":"ease-in-out"},{"class":"et_pb_blurb_4_tb_body","style":"zoomBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"20%","starting_opacity":"100%","speed_curve":"ease-in-out"},{"class":"et_pb_blurb_5_tb_body","style":"zoomBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"20%","starting_opacity":"100%","speed_curve":"ease-in-out"},{"class":"et_pb_blurb_6_tb_body","style":"zoomBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"20%","starting_opacity":"100%","speed_curve":"ease-in-out"},{"class":"et_pb_blurb_7_tb_body","style":"zoomBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"20%","starting_opacity":"100%","speed_curve":"ease-in-out"},{"class":"et_pb_row_1_tb_body","style":"zoomBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"6%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_text_4_tb_body","style":"slideBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"10%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_divider_1_tb_body","style":"zoomLeft","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_text_5_tb_body","style":"zoom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"6%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_button_2_tb_body","style":"zoom","repeat":"once","duration":"1000ms","delay":"100ms","intensity":"10%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_image_2_tb_body","style":"zoom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_text_6_tb_body","style":"slideBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"10%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_divider_2_tb_body","style":"zoomLeft","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_text_7_tb_body","style":"zoom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"6%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_image_3_tb_body","style":"zoomLeft","repeat":"once","duration":"1000ms","delay":"100ms","intensity":"20%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_image_4_tb_body","style":"zoomRight","repeat":"once","duration":"1000ms","delay":"100ms","intensity":"20%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_image_5_tb_body","style":"zoom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_text_8_tb_body","style":"slideBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"10%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_divider_3_tb_body","style":"zoomLeft","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_text_9_tb_body","style":"zoom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"6%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_text_10_tb_body","style":"slideBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"10%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_text_11_tb_body","style":"slideTop","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"6%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_image_6_tb_body","style":"slideTop","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"3%","starting_opacity":"0%","speed_curve":"ease-out"},{"class":"et_pb_text_12_tb_body","style":"slideBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"10%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_divider_4_tb_body","style":"zoomLeft","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_text_13_tb_body","style":"zoom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"6%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_button_3_tb_body","style":"zoom","repeat":"once","duration":"1000ms","delay":"100ms","intensity":"6%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_blurb_8_tb_body","style":"zoomLeft","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"10%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_blurb_9_tb_body","style":"zoomLeft","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"10%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_blurb_10_tb_body","style":"zoomLeft","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"10%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_blurb_11_tb_body","style":"zoomLeft","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"10%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_blurb_12_tb_body","style":"zoomLeft","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"10%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_blurb_13_tb_body","style":"zoomLeft","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"10%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_section_6_tb_body","style":"zoomBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"6%","starting_opacity":"100%","speed_curve":"ease-in-out"},{"class":"et_pb_blurb_14_tb_body","style":"zoomBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"20%","starting_opacity":"100%","speed_curve":"ease-in-out"},{"class":"et_pb_blurb_15_tb_body","style":"zoomBottom","repeat":"once","duration":"1000ms","delay":"100ms","intensity":"20%","starting_opacity":"100%","speed_curve":"ease-in-out"},{"class":"et_pb_text_14_tb_body","style":"slideBottom","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"10%","starting_opacity":"0%","speed_curve":"ease-in-out"},{"class":"et_pb_text_15_tb_body","style":"fade","repeat":"once","duration":"1000ms","delay":"0ms","intensity":"50%","starting_opacity":"0%","speed_curve":"ease-in-out"}];</script>
+	<style>form.fluent_form_4 .ff-btn-submit:not(.ff_btn_no_style) { background-color: var(--fluentform-primary); color: #ffffff; }</style>
+<style>form.fluent_form_3 .ff-btn-submit:not(.ff_btn_no_style) { background-color: var(--fluentform-primary); color: #ffffff; }</style>
+<link rel="stylesheet" id="fluent-form-styles-css" href="/wp-content/plugins/fluentform/assets/css/fluent-forms-public-rtl.css?ver=5.2.0" type="text/css" media="all">
+<link rel="stylesheet" id="fluentform-public-default-css" href="/wp-content/plugins/fluentform/assets/css/fluentform-public-default-rtl.css?ver=5.2.0" type="text/css" media="all">
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" id="jquery-js-after">
+/* <![CDATA[ */
+jqueryParams.length&&$.each(jqueryParams,function(e,r){if("function"==typeof r){var n=String(r);n.replace("$","jQuery");var a=new Function("return "+n)();$(document).ready(a)}});
+/* ]]> */
+</script>
+<script type="text/javascript" id="divi-custom-script-js-extra">
+/* <![CDATA[ */
+var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
+var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"};
+var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_custom = {"ajaxurl":"\/wp-admin\/admin-ajax.php","images_uri":"\/wp-content\/themes\/Divi\/images","builder_images_uri":"\/wp-content\/themes\/Divi\/includes\/builder\/images","et_frontend_nonce":"8a1459c0cd","subscription_failed":"لطفا، فیلدهای زیر را بررسی کنید تا مطمئن شوید که اطلاعات وارد شده صحیح میباشد.","et_ab_log_nonce":"30cd868d7d","fill_message":"لطفا، فیلدهای زیر را پر کنید:","contact_error_message":"لطفا، خطاهای زیر را اصلاح کنید:","invalid":"ایمیل نامعتبر","captcha":"کپچا","prev":"قبلی","previous":"قبلی","next":"بعدی","wrong_captcha":"شما مقدار اشتباهی برای کپچا وارد کردید.","wrong_checkbox":"چک باکس","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"1","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"no","is_shortcode_tracking":"","tinymce_uri":"\/wp-content\/themes\/Divi\/includes\/builder\/frontend-builder\/assets\/vendors","accent_color":"#7EBEC5","waypoints_options":[]};
+var et_pb_box_shadow_elements = [];
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/themes/Divi/js/scripts.min.js?ver=4.27.0" id="divi-custom-script-js"></script>
+<script type="text/javascript" src="/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/jquery.fitvids.js?ver=4.27.0" id="fitvids-js"></script>
+<script type="text/javascript" src="/wp-content/themes/Divi/core/admin/js/common.js?ver=4.27.0" id="et-core-common-js"></script>
+<script type="text/javascript" id="fluent-form-submission-js-extra">
+/* <![CDATA[ */
+var fluentFormVars = {"ajaxUrl":"\/wp-admin\/admin-ajax.php","forms":[],"step_text":"مرحله %activeStep% از %totalStep% - %stepTitle%","is_rtl":"1","date_i18n":{"previousMonth":"ماه گذشته","nextMonth":"ماه آینده","months":{"shorthand":["ژان","فوریه","مارس","آوریل","ممکن است","ژوئن","ژوئیه","اوت","سپتامبر","اکتبر","نوامبر","دسامبر"],"longhand":["ژانویه","فوریه","مارس","آوریل","ممکن است","ژوئن","جولای","اوت","سپتامبر","اکتبر","نوامبر","دسامبر"]},"weekdays":{"longhand":["یکشنبه","دوشنبه","سهشنبه","چهار شنبه","پنج شنبه","جمعه","شنبه"],"shorthand":["آفتاب","دوشنبه","سه شنبه","چهارشنبه","پنج شنبه","جمعه","نشست"]},"daysInMonth":[31,28,31,30,31,30,31,31,30,31,30,31],"rangeSeparator":" به ","weekAbbreviation":"هفته","scrollTitle":"به افزایش پیمایش کنید","toggleTitle":"برای جابجایی کلیک کنید","amPM":["صبح","PM"],"yearAriaLabel":"سال","firstDayOfWeek":6},"pro_version":"","fluentform_version":"5.2.0","force_init":"","stepAnimationDuration":"350","upload_completed_txt":"100% تکمیل شده","upload_start_txt":"0% تکمیل شده است","uploading_txt":"در حال آپلود","choice_js_vars":{"noResultsText":"نتیجه ای پیدا نشد","loadingText":"بارگذاری...","noChoicesText":"هیچ انتخابی برای انتخاب وجود ندارد","itemSelectText":"برای انتخاب فشار دهید","maxItemText":"فقط %%maxItemCount%% گزینه ها را می توان اضافه کرد"},"input_mask_vars":{"clearIfNotMatch":false}};
+var fluentFormVars = {"ajaxUrl":"\/wp-admin\/admin-ajax.php","forms":[],"step_text":"مرحله %activeStep% از %totalStep% - %stepTitle%","is_rtl":"1","date_i18n":{"previousMonth":"ماه گذشته","nextMonth":"ماه آینده","months":{"shorthand":["ژان","فوریه","مارس","آوریل","ممکن است","ژوئن","ژوئیه","اوت","سپتامبر","اکتبر","نوامبر","دسامبر"],"longhand":["ژانویه","فوریه","مارس","آوریل","ممکن است","ژوئن","جولای","اوت","سپتامبر","اکتبر","نوامبر","دسامبر"]},"weekdays":{"longhand":["یکشنبه","دوشنبه","سهشنبه","چهار شنبه","پنج شنبه","جمعه","شنبه"],"shorthand":["آفتاب","دوشنبه","سه شنبه","چهارشنبه","پنج شنبه","جمعه","نشست"]},"daysInMonth":[31,28,31,30,31,30,31,31,30,31,30,31],"rangeSeparator":" به ","weekAbbreviation":"هفته","scrollTitle":"به افزایش پیمایش کنید","toggleTitle":"برای جابجایی کلیک کنید","amPM":["صبح","PM"],"yearAriaLabel":"سال","firstDayOfWeek":6},"pro_version":"","fluentform_version":"5.2.0","force_init":"","stepAnimationDuration":"350","upload_completed_txt":"100% تکمیل شده","upload_start_txt":"0% تکمیل شده است","uploading_txt":"در حال آپلود","choice_js_vars":{"noResultsText":"نتیجه ای پیدا نشد","loadingText":"بارگذاری...","noChoicesText":"هیچ انتخابی برای انتخاب وجود ندارد","itemSelectText":"برای انتخاب فشار دهید","maxItemText":"فقط %%maxItemCount%% گزینه ها را می توان اضافه کرد"},"input_mask_vars":{"clearIfNotMatch":false}};
+/* ]]> */
+</script>
+<script type="text/javascript" src="/wp-content/plugins/fluentform/assets/js/form-submission.js?ver=5.2.0" id="fluent-form-submission-js"></script>
+<style id="et-builder-module-design-1-cached-inline-styles">.clearfix:after,.clearfix:before{content:'';display:table}.clearfix:after{clear:both;display:block}a{text-decoration:none}.login-wrap{margin:auto;max-width:425px;min-height:370px;border-radius:10px;position:relative;background:url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat center;box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19)}.login-html{width:100%;height:100%;position:absolute;border-radius:10px;padding:50px;background:#0d7c66d6}.login-html .sign-in-htm,.login-html .sign-up-htm{top:0;left:0;right:0;bottom:0;position:absolute;transform:rotateY(180deg);backface-visibility:hidden;transition:all .4s linear}.login-html .sign-in,.login-html .sign-up,.login-form .group .check{display:none}.login-html .tab,.login-form .group .label,.login-form .group .button{text-transform:uppercase}.login-html .tab{font-size:22px;margin-right:15px;padding-bottom:5px;margin:0 15px 10px 0;display:inline-block;border-bottom:2px solid transparent;color:#000}.login-html .sign-in:checked+.tab,.login-html .sign-up:checked+.tab{color:#fff;border-color:#1161ee}.login-form{min-height:345px;position:relative;perspective:1000px;transform-style:preserve-3d}.login-form .group{margin-bottom:15px}.login-form .group .label,.login-form .group .input,.login-form .group .button{width:100%;color:#fff;display:block}.login-form .group .input,.login-form .group .button{border:none;padding:15px 20px;border-radius:25px;background:rgba(255,255,255,.1)}.login-form .group input[data-type="password"]{text-security:circle;-webkit-text-security:circle}.login-form .group .label{color:#aaa;font-size:12px}.login-form .group .button{background:#1161ee}.login-form .group label .icon{width:15px;height:15px;border-radius:2px;position:relative;display:inline-block;background:rgba(255,255,255,.1)}.login-form .group label .icon:before,.login-form .group label .icon:after{content:'';width:10px;height:2px;background:#fff;position:absolute;transition:all .2s ease-in-out 0s}.login-form .group label .icon:before{left:3px;width:5px;bottom:6px;transform:scale(0) rotate(0)}.login-form .group label .icon:after{top:6px;right:0;transform:scale(0) rotate(0)}.login-form .group .check:checked+label{color:#fff}.login-form .group .check:checked+label .icon{background:#1161ee}.login-form .group .check:checked+label .icon:before{transform:scale(1) rotate(45deg)}.login-form .group .check:checked+label .icon:after{transform:scale(1) rotate(-45deg)}.login-html .sign-in:checked+.tab+.sign-up+.tab+.login-form .sign-in-htm{transform:rotate(0)}.login-html .sign-up:checked+.tab+.login-form .sign-up-htm{transform:rotate(0)}.hr{height:2px;margin:60px 0 50px 0;background:rgba(255,255,255,.2)}.foot-lnk{text-align:center}.clearfix:after,.clearfix:before{content:'';display:table}.clearfix:after{clear:both;display:block}a{text-decoration:none}.login-wrap{margin:auto;max-width:425px;min-height:370px;border-radius:10px;position:relative;background:url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat center;box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19)}.login-html{width:100%;height:100%;position:absolute;border-radius:10px;padding:50px;background:#0d7c66d6}.login-html .sign-in-htm,.login-html .sign-up-htm{top:0;left:0;right:0;bottom:0;position:absolute;transform:rotateY(180deg);backface-visibility:hidden;transition:all .4s linear}.login-html .sign-in,.login-html .sign-up,.login-form .group .check{display:none}.login-html .tab,.login-form .group .label,.login-form .group .button{text-transform:uppercase}.login-html .tab{font-size:22px;margin-right:15px;padding-bottom:5px;margin:0 15px 10px 0;display:inline-block;border-bottom:2px solid transparent;color:#000}.login-html .sign-in:checked+.tab,.login-html .sign-up:checked+.tab{color:#fff;border-color:#1161ee}.login-form{min-height:345px;position:relative;perspective:1000px;transform-style:preserve-3d}.login-form .group{margin-bottom:15px}.login-form .group .label,.login-form .group .input,.login-form .group .button{width:100%;color:#fff;display:block}.login-form .group .input,.login-form .group .button{border:none;padding:15px 20px;border-radius:25px;background:rgba(255,255,255,.1)}.login-form .group input[data-type="password"]{text-security:circle;-webkit-text-security:circle}.login-form .group .label{color:#aaa;font-size:12px}.login-form .group .button{background:#1161ee}.login-form .group label .icon{width:15px;height:15px;border-radius:2px;position:relative;display:inline-block;background:rgba(255,255,255,.1)}.login-form .group label .icon:before,.login-form .group label .icon:after{content:'';width:10px;height:2px;background:#fff;position:absolute;transition:all .2s ease-in-out 0s}.login-form .group label .icon:before{left:3px;width:5px;bottom:6px;transform:scale(0) rotate(0)}.login-form .group label .icon:after{top:6px;right:0;transform:scale(0) rotate(0)}.login-form .group .check:checked+label{color:#fff}.login-form .group .check:checked+label .icon{background:#1161ee}.login-form .group .check:checked+label .icon:before{transform:scale(1) rotate(45deg)}.login-form .group .check:checked+label .icon:after{transform:scale(1) rotate(-45deg)}.login-html .sign-in:checked+.tab+.sign-up+.tab+.login-form .sign-in-htm{transform:rotate(0)}.login-html .sign-up:checked+.tab+.login-form .sign-up-htm{transform:rotate(0)}.hr{height:2px;margin:60px 0 50px 0;background:rgba(255,255,255,.2)}.foot-lnk{text-align:center}</style>	
+	</body>
+</html>
