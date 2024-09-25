@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: unzip
         run: |
-          rm -r upld/extracted
+          rm -r upld/extracted || true
           filename=$(basename -s .zip *.zip)
           unzip *.zip
           rm *.zip
